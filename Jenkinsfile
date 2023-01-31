@@ -20,3 +20,4 @@ stages{
       sh  "mvn clean package"
   }
   }
+}
