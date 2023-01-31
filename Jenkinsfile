@@ -10,13 +10,13 @@ stages{
 
   stage('CheckOutCode'){
     steps{
-    git 'https://github.com/SridharChary97/new-repo.git'
+      git 'https://github.com/SridharChary97/new-repo.git'
 	
 	}
   }
   
   stage('Build'){
-  steps{
-  sh  "mvn clean package"
+    steps{
+      sh  "mvn clean package"
   }
   }
