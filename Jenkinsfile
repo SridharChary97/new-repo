@@ -2,9 +2,7 @@ pipeline{
 
 agent any
 
-tools{
-maven 'maven3.8.2'
-}
+tool name: 'maven-3.8.6', type: 'maven'
 
 stages{
     stage('CheckOutCode'){
