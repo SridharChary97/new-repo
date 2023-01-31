@@ -12,7 +12,7 @@ stages{
    stage('Build'){
         steps{
           def mavenH = tool name: 'maven-3.8.6', type: 'maven'
-          sh  "$(mavenH)/bin/mvn clean package"
+		sh  "${mavenH}/bin/mvn clean package"
   }
   }
 	
