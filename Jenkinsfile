@@ -9,10 +9,10 @@ stages{
 	}
   }
   
-stage('Build'){
-    tool name: 'maven-3.8.6', type: 'maven'
-    steps{
-        sh  "mvn clean package"
+   stage('Build'){
+        steps{
+          def mavenH = tool name: 'maven-3.8.6', type: 'maven'
+          sh  "$(mavenH)/bin/mvn clean package"
   }
   }
 	
