@@ -2,8 +2,6 @@ pipeline{
 
 agent any
 
-tool name: 'maven-3.8.6', type: 'maven'
-
 stages{
     stage('CheckOutCode'){
         steps{
@@ -12,6 +10,7 @@ stages{
   }
   
 stage('Build'){
+    tool name: 'maven-3.8.6', type: 'maven'
     steps{
         sh  "mvn clean package"
   }
