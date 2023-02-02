@@ -13,10 +13,16 @@ stages{
         bat 'python --version'
       }
     }
-    stage('hello') {
+    stage('hello.py') {
       steps {
 	git 'https://github.com/SridharChary97/new-repo.git'
         bat 'python hello.py'
+      }
+    }
+   stage('shell') {
+      steps {
+	git 'https://github.com/SridharChary97/new-repo.git'
+        bat 'sh odd.sh'
       }
     }
   }
