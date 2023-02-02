@@ -8,13 +8,17 @@ stages{
             git credentialsId: 'Git', url: 'https://github.com/SridharChary97/new-repo.git'
 	}
   }
-  
-   stage('Build'){
-        steps{
-          def mavenH = tool name: 'maven-3.8.6', type: 'maven'
-		sh  "${mavenH}/bin/mvn clean package"
+    stage('version') {
+      steps {
+        sh 'python3 --version'
+      }
+    }
+    stage('hello') {
+      steps {
+        sh 'python3 hello.py'
+      }
+    }
   }
-  }
-	
+}
 }
 }
