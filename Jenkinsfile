@@ -15,7 +15,8 @@ stages{
     }
     stage('hello') {
       steps {
-        sh 'python3 hello.py'
+	git 'https://github.com/SridharChary97/new-repo.git'
+        bat 'python hello.py'
       }
     }
   }
