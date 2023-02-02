@@ -5,7 +5,7 @@ agent any
 stages{
     stage('CheckOutCode'){
         steps{
-            git credentialsId: 'Git', url: 'https://github.com/SridharChary97/new-repo.git'
+            git 'https://github.com/SridharChary97/new-repo.git'
 	}
   }
     stage('version') {
@@ -19,6 +19,4 @@ stages{
       }
     }
   }
-}
-}
 }
