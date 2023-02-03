@@ -21,8 +21,12 @@ stages{
     }
    stage('shell') {
       steps {
-	git 'https://github.com/SridharChary97/new-repo.git'
         bat 'sh odd.sh'
+      }
+    }
+   stage('maven') {
+      steps {
+        bat 'mvn clean package'
       }
     }
   }
