@@ -2,9 +2,9 @@ pipeline{
 
 agent any
 stages{
-  stage('shell') {
+  stage('shell2') {
     steps {
-      bat 'sh echo "sridhar"'
+      bat 'sh odd.sh'
    }
  }
 }
