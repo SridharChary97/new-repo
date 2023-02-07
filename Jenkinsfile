@@ -1,8 +1,16 @@
 pipeline{
 
 agent any
-	
-tools {
+stages{
+  stage('shell') {
+    steps {
+      bat 'sh echo "sridhar"'
+   }
+ }
+}
+}
+
+/*tools {
   maven 'maven-3.8.7'
 }
    
@@ -34,4 +42,5 @@ stages{
       }
     }
   }
-}
+  }
+  */
