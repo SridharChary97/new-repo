@@ -14,23 +14,23 @@ stages{
   }
     stage('version') {
       steps {
-        bat 'python --version'
+        sh 'python --version'
       }
     }
     stage('hello.py') {
       steps {
 	git 'https://github.com/SridharChary97/new-repo.git'
-        bat 'python hello.py'
+        sh 'python hello.py'
       }
     }
    stage('shell') {
       steps {
-        bat 'sh odd.sh'
+        sh 'sh odd.sh'
       }
     }
    stage('maven') {
       steps {
-        bat 'mvn clean package'
+        sh 'mvn clean package'
       }
     }
   }
