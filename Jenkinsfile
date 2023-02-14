@@ -1,25 +1,28 @@
 pipeline{
 
 agent any
+tools {
+  maven 'maven-3.8.7'
+}
+	
 stages{
   stage('shell2') {
     steps {
-      bat 'sh odd.sh'
+      sh 'sh odd.sh'
    }
  }
 }
 }
 
-/*tools {
-  maven 'maven-3.8.7'
-}
-   
-stages{
+
+  
+/* stages{
     stage('CheckOutCode'){
         steps{
             git 'https://github.com/SridharChary97/new-repo.git'
 	}
   }
+
     stage('version') {
       steps {
         sh 'python --version'
