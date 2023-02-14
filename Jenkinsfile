@@ -12,7 +12,7 @@ stages{
             git 'https://github.com/SridharChary97/new-repo.git'
 	}
   }
-    stage('version') {
+    /* stage('version') {
       steps {
         sh 'python --version'
       }
@@ -23,6 +23,7 @@ stages{
         sh 'python hello.py'
       }
     }
+    */
    stage('shell') {
       steps {
         sh 'sh odd.sh'
